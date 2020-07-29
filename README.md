@@ -28,7 +28,7 @@ Enable connection between Docker-host and Jenkins
    - Enter an item name: `Deploy_on_Docker_Host`
      
    - *Source Code Management:*
-      - Repository: `https://github.com/Ashish-Dalvi/hello-world.git`
+      - Repository: `https://github.com/Ashish-Dalvi/Hello-World.git`
       - Branches to build : `*/master`  
    - *Poll SCM* :      - `* * * *`
 
@@ -48,3 +48,6 @@ Enable connection between Docker-host and Jenkins
 
 
 Save and run the job now.
+
+### Link to access Hello World 
+http://18.177.140.119:8080/webapp/
