@@ -50,4 +50,4 @@ Enable connection between Docker-host and Jenkins
 Save and run the job now.
 
 ### Link to access Hello World 
-http://18.177.140.119:8080/webapp/
+http://18.181.174.173:8080/webapp/
