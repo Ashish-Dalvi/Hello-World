@@ -40,8 +40,8 @@ pipeline {
 			     withCredentials([string(credentialsId: 'dockerhubC', variable: 'dockerhubC')]){
                  sh 'docker login docker.io -u ashishdalvi -p ${dockerhubC}'
                  echo "Push Docker Image to DockerHub : In Progress"
-                 sh 'docker tag 8f68f646c760  ashishdalvi/linuxacademy:latest'
-				 sh 'docker push ashishdalvi/linuxacademy:latest'
+                 sh 'docker tag e85edf5a9861  ashishdalvi/helloworld:latest'
+				 sh 'docker push ashishdalvi/helloworld:latest'
 				 echo "Push Docker Image to DockerHub : In Progress"
 				 }
               }
