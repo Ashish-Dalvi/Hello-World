@@ -45,12 +45,13 @@ pipeline {
 		//		 echo "Push Docker Image to DockerHub : In Progress"
 		//		 }
        //       }
-
+}
        post {
-          always {
+          success {
+
              echo 'I will always say Hello again!'
         }
-    }
+
 
             }
         }
