@@ -3,5 +3,5 @@ From tomcat:8-jre8
 
 # Maintainer 
 MAINTAINER "ashishdalvir@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+COPY ./helloworld.war /usr/local/tomcat/webapps
 
