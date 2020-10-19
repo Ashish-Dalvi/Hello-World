@@ -23,6 +23,11 @@ pipeline {
         }
 
         stage('Code Package') {
+            when{
+              expression {
+              env.BRANCH_NAME == 'dev'
+              }
+            }
             steps {
                 sh 'mvn clean package'
                // archiveArtifacts artifacts: 'target/*.war', fingerprint: true
