@@ -23,6 +23,7 @@ pipeline {
         }
 
         stage('Code Package') {
+            //this stage is executed when branch = master
             when{
               expression {
               env.BRANCH_NAME == 'master'
@@ -56,9 +57,7 @@ pipeline {
 
              echo 'I will always say Hello again!'
         }
-}
+    }
 
-            }
-        }
-
+  }
 
