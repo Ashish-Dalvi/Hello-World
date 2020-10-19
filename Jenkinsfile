@@ -25,7 +25,7 @@ pipeline {
         stage('Code Package') {
             when{
               expression {
-              env.BRANCH_NAME == 'dev'
+              env.BRANCH_NAME == 'master'
               }
             }
             steps {
