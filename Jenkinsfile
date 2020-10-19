@@ -39,17 +39,17 @@ pipeline {
                         sh 'docker build -t helloworld .'
                    }
                  }
-      //  stage('Upload Docker to DockerRegistry') {
-      //     steps {
-		//      script {
-	//		     withCredentials([string(credentialsId: 'dockerhubC', variable: 'dockerhubC')]){
-      //           sh 'docker login docker.io -u ashishdalvi -p ${dockerhubC}'
-      //           echo "Push Docker Image to DockerHub : In Progress"
-      //           sh 'docker tag e85edf5a9861  ashishdalvi/helloworld:latest'
-		//		 sh 'docker push ashishdalvi/helloworld:latest'
-		//		 echo "Push Docker Image to DockerHub : In Progress"
-		//		 }
-       //       }
+        stage('Upload Docker to DockerRegistry') {
+           steps {
+	       script {
+			     withCredentials([string(credentialsId: 'dockerhubC', variable: 'dockerhubC')]){
+                 sh 'docker login docker.io -u ashishdalvi -p ${dockerhubC}'
+                 echo "Push Docker Image to DockerHub : In Progress"
+                 sh 'docker tag e85edf5a9861  ashishdalvi/helloworld:latest'
+				 sh 'docker push ashishdalvi/helloworld:latest'
+				 echo "Push Docker Image to DockerHub : In Progress"
+				 }
+              }
 }
        post {
           success {
