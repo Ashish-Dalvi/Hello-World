@@ -40,11 +40,11 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-           steps {
-                sh 'docker build -t helloworld .'
-           }
-         }
+        //stage('Build Docker Image') {
+         //  steps {
+        //        sh 'docker build -t helloworld .'
+        //   }
+        // }
         stage('Shell') {
            steps {
                 sh '/var/lib/jenkins/hello.sh'
