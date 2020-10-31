@@ -26,6 +26,7 @@ pipeline {
             }
         }
 
+
         stage('Code Package') {
         //this stage is executed when branch = master
             when{
@@ -44,5 +45,11 @@ pipeline {
                 sh 'docker build -t helloworld .'
            }
          }
+        stage('Shell') {
+           steps {
+                sh '/var/lib/jenkins/hello.sh'
+           }
+         }
+
    }
 }
